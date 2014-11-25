@@ -1,4 +1,4 @@
-Xamarin bindings for the UserVoice iOS SDK.
+Xamarin bindings for the UserVoice iOS SDK 3.2.1.
 
 Most of the methods/properties are bound except for those listed below as they are not currently used in [Clusterize](http://clusterize.co).
 

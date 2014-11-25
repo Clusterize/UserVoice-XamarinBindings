@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectTypeGuids>{F5B4F3BC-B597-4E2B-B552-EF5D8A32436F};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <ProjectGuid>{905FC2D5-AC63-47D0-A9FB-FCA037C059B8}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>UserVoiceBindingsClassic</RootNamespace>
+    <IPhoneResourcePrefix>Resources</IPhoneResourcePrefix>
+    <AssemblyName>UserVoiceBindings-Classic</AssemblyName>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>full</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="monotouch" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Resources\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ObjcBindingApiDefinition Include="ApiDefinition.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ObjcBindingCoreSource Include="StructsAndEnums.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Xamarin\Xamarin.ObjcBinding.CSharp.targets" />
+  <ItemGroup>
+    <ObjcBindingNativeLibrary Include="libUserVoice.a" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="libUserVoice.linkwith.cs">
+      <DependentUpon>libUserVoice.a</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\uv_article.png" />
+    <BundleResource Include="Resources\uv_article%402x.png" />
+    <BundleResource Include="Resources\uv_heart.png" />
+    <BundleResource Include="Resources\uv_heart%402x.png" />
+    <BundleResource Include="Resources\uv_idea.png" />
+    <BundleResource Include="Resources\uv_idea%402x.png" />
+    <BundleResource Include="Resources\ca.lproj\UserVoice.strings" />
+    <BundleResource Include="Resources\cs.lproj\UserVoice.strings" />
+    <BundleResource Include="Resources\da.lproj\UserVoice.strings" />
+    <BundleResource Include="Resources\de.lproj\UserVoice.strings" />
+    <BundleResource Include="Resources\el.lproj\UserVoice.strings" />
+    <BundleResource Include="Resources\en-GB.lproj\UserVoice.strings" />
+    <BundleResource Include="Resources\en.lproj\UserVoice.strings" />
+    <BundleResource Include="Resources\es.lproj\UserVoice.strings" />
+    <BundleResource Include="Resources\fi.lproj\UserVoice.strings" />
+    <BundleResource Include="Resources\fr.lproj\UserVoice.strings" />
+    <BundleResource Include="Resources\hr.lproj\UserVoice.strings" />
+    <BundleResource Include="Resources\hu.lproj\UserVoice.strings" />
+    <BundleResource Include="Resources\id.lproj\UserVoice.strings" />
+    <BundleResource Include="Resources\it.lproj\UserVoice.strings" />
+    <BundleResource Include="Resources\ja.lproj\UserVoice.strings" />
+    <BundleResource Include="Resources\ko.lproj\UserVoice.strings" />
+    <BundleResource Include="Resources\ms.lproj\UserVoice.strings" />
+    <BundleResource Include="Resources\nb.lproj\UserVoice.strings" />
+    <BundleResource Include="Resources\nl.lproj\UserVoice.strings" />
+    <BundleResource Include="Resources\pl.lproj\UserVoice.strings" />
+    <BundleResource Include="Resources\pt-PT.lproj\UserVoice.strings" />
+    <BundleResource Include="Resources\pt.lproj\UserVoice.strings" />
+    <BundleResource Include="Resources\ro.lproj\UserVoice.strings" />
+    <BundleResource Include="Resources\ru.lproj\UserVoice.strings" />
+    <BundleResource Include="Resources\sk.lproj\UserVoice.strings" />
+    <BundleResource Include="Resources\sv.lproj\UserVoice.strings" />
+    <BundleResource Include="Resources\th.lproj\UserVoice.strings" />
+    <BundleResource Include="Resources\tr.lproj\UserVoice.strings" />
+    <BundleResource Include="Resources\uk.lproj\UserVoice.strings" />
+    <BundleResource Include="Resources\vi.lproj\UserVoice.strings" />
+    <BundleResource Include="Resources\zh-Hans.lproj\UserVoice.strings" />
+    <BundleResource Include="Resources\zh-Hant.lproj\UserVoice.strings" />
+  </ItemGroup>
+</Project>

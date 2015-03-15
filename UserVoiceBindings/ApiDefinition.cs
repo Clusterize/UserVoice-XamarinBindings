@@ -1,9 +1,6 @@
-﻿using System;
-using System.Drawing;
-
-using MonoTouch.ObjCRuntime;
-using MonoTouch.Foundation;
-using MonoTouch.UIKit;
+﻿using Foundation;
+using UIKit;
+using System;
 
 namespace UserVoiceBindingsClassic
 {
@@ -81,10 +78,10 @@ namespace UserVoiceBindingsClassic
 		NSDictionary CustomFields { get; set; }
 
 		[Export ("topicId")]
-		int TopicId { get; set; }
+		nint TopicId { get; set; }
 
 		[Export ("forumId")]
-		int ForumId { get; set; }
+		nint ForumId { get; set; }
 
 		[Export ("showForum")]
 		bool ShowForum { get; set; }
